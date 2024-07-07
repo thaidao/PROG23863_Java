@@ -1,0 +1,3 @@
+Encapsulation is a good thing because:
+- Restrict the direct access to some components of an object. Then it improves the security of the encapsulated data
+- Setter is defined in one place and not in multiple places. Also, It improves flexibility because changing made to one part of the code can be successfully implemented without affecting any other part of the code.
