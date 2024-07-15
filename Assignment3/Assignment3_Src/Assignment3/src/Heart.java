@@ -16,6 +16,8 @@ public class Heart {
     }
 
     public void oneMinute() {
-        System.out.println("Heart beating with " + heartBeat);
+        for (int i = 0; i < bpm; i++) {
+            System.out.println(heartBeat);
+        }
     }
 }

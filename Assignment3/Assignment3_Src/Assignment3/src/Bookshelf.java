@@ -1,21 +1,22 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Bookshelf {
-    private List<Book> books = new ArrayList<>(10);
+    // Contains an array of 10 Book objects
+    private Book[] books = new Book[10];
 
     public void addBookToBookshelf(Book book) {
-        if (books.size() < 10) {
-            books.add(book);
-        } else {
-            System.out.println("Bookshelf is full!");
+        for (int i = 0; i < books.length; i++) {
+            if (books[i] == null) {
+                books[i] = book;
+                return;
+            }
         }
+        System.out.println("Bookshelf is full!");
     }
 
     public Book retrieveBookFromBookshelf(String title) {
-        for (Book book : books) {
-            if (book.getTitle().equals(title)) {
-                books.remove(book);
+        for (int i = 0; i < books.length; i++) {
+            if (books[i] != null && books[i].getTitle().equals(title)) {
+                Book book = books[i];
+                books[i] = null;
                 return book;
             }
         }
@@ -25,11 +26,19 @@ public class Bookshelf {
 
     public void displayBooks() {
         for (Book book : books) {
-            System.out.println(book.getTitle());
+            if (book != null) {
+                System.out.println(book.getTitle());
+            }
         }
     }
 
     public int howManyBooks() {
-        return books.size();
+        int count = 0;
+        for (Book book : books) {
+            if (book != null) {
+                count++;
+            }
+        }
+        return count;
     }
 }

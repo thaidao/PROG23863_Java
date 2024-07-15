@@ -14,6 +14,8 @@ public class App {
         person.putBookOnBookshelf(shelf);
         person.retrieveBookFromBookshelf("The Funny Story", shelf);
         
+        System.out.println(person.whatBookDoIHave());
+
         System.out.println("Books on shelf:");
         shelf.displayBooks();
 
