@@ -1,0 +1,6 @@
+public enum HeartBeat {
+    THUMPITYTHUMP,
+    PITTERPATTER,
+    BOOMCHICKA,
+    FLIPITYFLOP;
+}
