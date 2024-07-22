@@ -1,3 +1,5 @@
+package A3allothersclasses;
+
 public class Bookshelf {
     // Contains an array of 10 Book objects
     private Book[] books = new Book[10];
@@ -27,18 +29,29 @@ public class Bookshelf {
     public void displayBooks() {
         for (Book book : books) {
             if (book != null) {
-                System.out.println(book.getTitle());
+                System.out.print(book.getTitle() +",");
             }
         }
     }
 
+    //return the number of array elements in the book array that are not null
     public int howManyBooks() {
-        int count = 0;
+        int cnt = 0;
         for (Book book : books) {
             if (book != null) {
-                count++;
+                cnt++;
             }
         }
-        return count;
+        return cnt;
+    }
+
+    public void showHowManyBooks()
+    {
+        int numBook = howManyBooks();
+        if(numBook > 0){
+            System.out.println("There are "+ numBook+ " books on the bookshelf");
+        }else{
+            System.out.println("The bookshelf is empty"); 
+        }
     }
 }

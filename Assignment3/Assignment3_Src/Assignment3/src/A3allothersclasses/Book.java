@@ -1,3 +1,5 @@
+package A3allothersclasses;
+
 public class Book {
     private String title;
     private Genre genre;

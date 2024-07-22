@@ -1,3 +1,5 @@
+package A3allothersclasses;
+
 public class Heart {
     private int bpm;
     private HeartBeat heartBeat;
@@ -17,7 +19,7 @@ public class Heart {
 
     public void oneMinute() {
         for (int i = 0; i < bpm; i++) {
-            System.out.println(heartBeat);
+            System.out.print(heartBeat);
         }
     }
 }

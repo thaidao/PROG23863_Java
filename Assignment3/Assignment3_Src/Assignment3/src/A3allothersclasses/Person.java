@@ -1,3 +1,5 @@
+package A3allothersclasses;
+
 public class Person {
     private String name;
     private Book book;
